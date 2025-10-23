@@ -42,6 +42,5 @@ az ml data create --file datasets.yml --workspace-name az-mlops --resource-group
 az ml job create --file job.yml --resource-group ml --workspace-name az-mlops
 ```
 
-az ad sp create-for-rbac --name sp_ml_github --role contributor 
-                              --scope /subscriptions/4373fa97-1bf4-4b87-bc20-44774c0d8103/resourceGroups/ml \
-                              --sdk-auth
+## Set up github action secret
+https://github.com/marketplace/actions/azure-login
