@@ -42,5 +42,5 @@ az ml data create --file datasets.yml --workspace-name az-mlops --resource-group
 az ml job create --file job.yml --resource-group ml --workspace-name az-mlops
 ```
 
-## Set up github action secret
+## Set up github action secret.
 https://github.com/marketplace/actions/azure-login
