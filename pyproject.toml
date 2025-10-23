@@ -1,0 +1,14 @@
+[project]
+name = "mlops-challenge-01"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "flake8>=7.3.0",
+    "ipykernel>=7.0.1",
+    "mlflow>=3.5.0",
+    "pandas>=2.3.3",
+    "pytest>=8.4.2",
+    "scikit-learn>=1.7.2",
+]
