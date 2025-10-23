@@ -1,6 +1,10 @@
 name: Code checks
 
 on:
+  # new code
+  pull_request:
+    branches: [main]
+  # existing code
   workflow_dispatch:
 
 jobs:
