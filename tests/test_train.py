@@ -15,7 +15,7 @@ def test_csvs_no_files_invalid_path():
     assert error.match("Cannot use non-existent path provided")
 
 def test_csvs_valid_path():
-    path = '../production/data'
+    path = './production/data'
     result = get_csvs_df(path)
     print(len(result))
     assert len(result) > 0
