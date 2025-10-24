@@ -28,8 +28,7 @@ jobs:
 
       - name: Ensure resource providers are registered
         run: |
-          az provider register --namespace Microsoft.MachineLearningServices
-          az provider register --namespace Microsoft.ContainerRegistry
+          az provider show --namespace Microsoft.MachineLearningServices --query "registrationState"
 
       - name: Create endpoint
         run: |
