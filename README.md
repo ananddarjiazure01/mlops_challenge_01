@@ -44,3 +44,14 @@ az ml job create --file job.yml --resource-group ml --workspace-name az-mlops
 
 ## Set up github action secret
 https://github.com/marketplace/actions/azure-login
+
+```
+{
+    "clientSecret":  "******",
+    "subscriptionId":  "******",
+    "tenantId":  "******",
+    "clientId":  "******"
+}
+```
+
+
