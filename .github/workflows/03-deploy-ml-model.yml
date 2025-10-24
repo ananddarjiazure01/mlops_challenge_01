@@ -26,6 +26,11 @@ jobs:
         with:
           creds: ${{secrets.AZURE_CREDENTIALS}}
 
+      - name: Ensure resource providers are registered
+        run: |
+          az provider register --namespace Microsoft.MachineLearningServices
+          az provider register --namespace Microsoft.ContainerRegistry
+
       - name: Create endpoint
         run: |
           az ml online-endpoint create \
