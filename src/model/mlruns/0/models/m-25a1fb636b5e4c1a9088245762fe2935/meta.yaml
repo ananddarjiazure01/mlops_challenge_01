@@ -1,0 +1,10 @@
+artifact_location: file:///C:/mnt_folder/mlops/mlops_challenge_01/src/model/mlruns/0/models/m-25a1fb636b5e4c1a9088245762fe2935/artifacts
+creation_timestamp: 1761551961279
+experiment_id: '0'
+last_updated_timestamp: 1761551964312
+model_id: m-25a1fb636b5e4c1a9088245762fe2935
+model_type: null
+name: model
+source_run_id: d4d50bcac7c14590a75a679e51ff8378
+status: 2
+status_message: null
