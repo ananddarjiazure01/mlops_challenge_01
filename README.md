@@ -35,12 +35,31 @@ cd ./src/model
 uv run train.py --training_data ../../production/data --reg_rate 0.01
 ```
 
+## Create azure ml environment
+```
+az ml environment create --file environment.yml --resource-group ml --workspace-name az-mlops
+```
 
+## Create dataset
+```
 az ml data create --file datasets.yml --workspace-name az-mlops --resource-group ml
+```
 
+## Create Job
 ```
 az ml job create --file job.yml --resource-group ml --workspace-name az-mlops
 ```
 
 ## Set up github action secret
 https://github.com/marketplace/actions/azure-login
+
+```
+{
+    "clientSecret":  "******",
+    "subscriptionId":  "******",
+    "tenantId":  "******",
+    "clientId":  "******"
+}
+```
+
+

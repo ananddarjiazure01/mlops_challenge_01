@@ -1,15 +1,4 @@
 $schema: https://azuremlschemas.azureedge.net/latest/environment.schema.json
-name: basic-env-scikit
-version: 1
-description: Basic environment with scikit-learn and common data science packages
-build:
-  conda_file: |
-    channels:
-      - defaults
-    dependencies:
-      - python=3.12
-      - pytest==8.4.2
-      - mlflow==3.4.0
-      - pandas==2.3.3
-      - scikit-learn==1.7.2
-      - pip
+name: aml_environment
+image: mcr.microsoft.com/azureml/openmpi4.1.0-cuda11.1-cudnn8-ubuntu20.04:latest
+conda_file: conda.yml
