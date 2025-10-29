@@ -1,0 +1,35 @@
+name: Test Deployed Endpoint
+
+on:
+  workflow_dispatch:
+
+env:
+  workspace-name: az-mlops
+  resource-group: ml
+
+jobs:
+  deploy:
+    name: Test Endpoint
+    runs-on: ubuntu-latest
+    environment: 
+      name: prod
+    
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@main
+
+      - name: Install az ml extension
+        run: az extension add -n ml -y
+
+      - name: Azure login
+        uses: azure/login@v1
+        with:
+          creds: ${{secrets.AZURE_CREDENTIALS}}
+
+      - name: Test deployed model
+        run: |
+          az ml online-endpoint invoke \
+            --name diabetes-endpoint \
+            --request-file src/sample-request.json \
+            --resource-group ${{ env.resource-group }} \
+            --workspace-name ${{ env.workspace-name }}
